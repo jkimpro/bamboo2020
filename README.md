@@ -4,7 +4,7 @@ bamboo school 2020 project prototype repository (chatbot project)
 enhancing the withnet gsshop coperation site using the FAQ chatbot
 
 
-## Architechture 
+## Architecture 
 
 
 ## Front-End
