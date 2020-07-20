@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Input} from 'react-bootstrap';
+import {Button,Input, Container, Box} from '@material-ui/core';
 //관련 input 옵션 설정하기
 //css
 
@@ -68,12 +68,17 @@ class ChattingView extends Component {
         });
         return (
             <div className="body">
-                <div className = "chattingView-chatbox">
-                    <div className ="chattingView-chat">{list}</div>
-                </div>
+                <Container>
+                    <Box my={2}>
+                        {list}
+                    </Box>
+                    {/* <div className = "chattingView-chatbox" width='1000' height='1000'>
+                        <div className ="chattingView-chat">{list}</div>
+                    </div> */}
+                </Container>
                 <div className = "input-group chattingView-input">
-                    <input type="text" className = "form-control inputMsg" placeholder="input message..." onChange={this.inputMSG} onKeyDown={this.keysend}/>
-                    <button type ="button" className="btn btn-primary" onClick ={this.send}>입력</button>
+                    <Input type="text" className = "form-control inputMsg"  onChange={this.inputMSG} onKeyDown={this.keysend}/>
+                    <Button className="btn btn-primary" onClick ={this.send}>입력</Button>
                 </div>
             </div>
 
