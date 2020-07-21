@@ -35,6 +35,17 @@ class ChattingView extends Component {
         });
     }
     send(){
+
+        // 입력이 되어지고
+
+        //서버로 전송이 된다.
+
+        //서버로의 응답을 대기한다
+
+        //서버로의 응답이 올경우 update
+
+        
+
         socket.emit('send', {msg: this.state.msg, channel:this.state.channel});
         this.setState({msg:''});
         document.querySelector(".inputMsg").value="";
@@ -55,6 +66,7 @@ class ChattingView extends Component {
         let list = this.state.chatList.map((item,index) =>{
 
                 let date = new Date(item.chat.date);
+
                 return(
                     <div key = {index}>
                         {item.chat.ip != null ? 
@@ -66,10 +78,12 @@ class ChattingView extends Component {
                     </div>
                 )
         });
+
+
         return (
             <div className="body">
                 <Container>
-                    <Box my={2}>
+                    <Box color = "text.primary"  m = {1}>
                         {list}
                     </Box>
                     {/* <div className = "chattingView-chatbox" width='1000' height='1000'>

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import AppChannel from './components/channel/channel';
-import AppChattingView from './components/chattingView/chattingView';
+import RootContainer from './components/rootContainer/rootContainer';
 
 
 //채널 기반 채팅이기에 변수는 channel 밖에 없음
@@ -20,12 +19,10 @@ class App extends Component{
   render(){
     return(
       <div className = "App">
-          <AppChannel channel = {this.state.channel} onUpdate = {this.updateChannel} />
-          <AppChattingView channel = {this.state.channel}/>
-
+        <RootContainer/>
+      
       </div>
-
-    );
+      );
   }
 }
 

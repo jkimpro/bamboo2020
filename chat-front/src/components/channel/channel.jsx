@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Button,Input, Container, Box} from '@material-ui/core';
 
 class Channel extends Component{
 
@@ -17,7 +18,7 @@ class Channel extends Component{
         return(
             <header className = "Channel-header">
                 <h1 className ="Channel-title">chatting app</h1>
-                <input type = "text" className = "channel" placeholder="channel name" onBlur = {this.updateChannel} onKeyDown={this.keyUpdateChannel} />
+                <Input type = "text" className = "channel" placeholder="channel name" onBlur = {this.updateChannel} onKeyDown={this.keyUpdateChannel} />
             </header>
         );
     }
