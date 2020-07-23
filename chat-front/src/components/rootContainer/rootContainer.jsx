@@ -21,8 +21,7 @@ class RootContainer extends Component{
                 <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }}>
                     {/* <AppChannel channel = {this.state.channel} onUpdate = {this.updateChannel} /> */}
                     <AppChattingView channel = {this.state.channel}/>
-               </Typography>
-               
+               </Typography>              
             </Container>
         );
     };
