@@ -28,7 +28,6 @@ const routing = (
         <Route path='/signup' component = {SignupComponent}></Route>
         <Route path='/dashboard' component = {DashboardComponent}></Route>
 
-    
     </div>
   </Router>
 
