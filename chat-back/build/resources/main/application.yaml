@@ -1,0 +1,20 @@
+#  application.yml
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/rooting_main?serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: jkimpro10
+    password: jun48675@#
+#    jpa:
+#      hibernate:
+#        ddl-auto: update # 운영시에는 validate 추천
+#      show-sql: true
+server:
+  port: 8080
+  servlet:
+    path: /
+    context-path: /
+
+test: aaa
