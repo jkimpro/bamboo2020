@@ -1,0 +1,69 @@
+#domain
+
+spring:
+  profiles:
+    active: local
+  datasource:
+    hikari:
+      connection-timeout: 60000
+  jpa:
+    database: default
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      type:
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        type: trace
+        session_factory:
+          interceptor: com.bamboo2020.chatbot.config.HibernateQueryInterceptor
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: DEBUG
+
+##LOCAL
+#---
+#spring:
+#  profiles: local
+#
+#prd:
+#  datasource:
+#    jdbc-url: jdbc:oracle:thin:@10.53.27.102:1521:SMTCDB2
+#    username: cmsa_prd_user
+#    password: cmsa_prd_user2018
+#    driver-class: oracle.jdbc.driver.OracleDriver
+#    maxium-pool-size: 4
+#
+#web:
+#  datasource:
+#    jdbc-url: jdbc:oracle:thin:@10.53.27.102:1521:SMTCDB2
+#    username: web_comm_user
+#    password: web_comm_user2019
+#    driver-class: oracle.jdbc.driver.OracleDriver
+#    maximum-pool-size: 2
+#
+#agr:
+#  datasource:
+#    jdbc-url: jdbc:mariadb://10.53.27.102:3306/agrDB
+#    username: prd_app
+#    password: prd_app!@#$
+#    driver-class: org.mariadb.jdbc.Driver
+#    maxium-pool-size: 2
+
+
+
+#smtc:
+#  datasource:
+#    jdbc-url: jdbc:oracle:thin:@10.52.221.44:1630:DEVSMTC
+#    username: ENC(eY90jf9Hu2XidNXCGKBozw==)
+#    password: ENC(S3z2Cig3ue8O1QTp6QW/TTjmrHI8GFwY)
+#    driver-class: oracle.jdbc.driver.OracleDriver
+#    maximum-pool-size: 2

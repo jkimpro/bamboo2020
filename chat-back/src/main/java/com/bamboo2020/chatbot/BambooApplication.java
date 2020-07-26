@@ -14,18 +14,9 @@ import org.springframework.web.servlet.DispatcherServlet;
 @SpringBootApplication
 public class BambooApplication {
     public static void main(String[] args) {
-//        new SpringApplicationBuilder().bannerMode(Banner.Mode.CONSOLE).sources(BambooApplication.class).properties("spring.config.location="
-//                + "classpath:/domain.yml"
-//                + ", classpath:/application.yml"
-//                + ", classpath:/application.properties").run(args);
-
-//        new SpringApplicationBuilder().bannerMode(Banner.Mode.CONSOLE).sources(BambooApplication.class).properties("spring.config.location="
-//                + ", classpath:/application.yml"
-//             ).run(args);
-        SpringApplication application = new SpringApplication(BambooApplication.class);
-        application.run(args);
-
-
+        new SpringApplicationBuilder().bannerMode(Banner.Mode.CONSOLE).sources(BambooApplication.class).properties("spring.config.location="
+                + "classpath:/domain.yml"
+                + ", classpath:/application.yml").run(args);
     }
 
     @Bean

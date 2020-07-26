@@ -30,10 +30,12 @@ group 'com.bamboo2020.chatbot'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+
 repositories {
     mavenCentral()
 }
 dependencies {
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok:1.18.8'
 
@@ -42,6 +44,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     // JDBC
     compile("org.springframework.boot:spring-boot-starter-jdbc")
+
     // JPA (구동되는 DB가 있어야함)
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("org.hibernate:hibernate-core:5.4.15.Final")

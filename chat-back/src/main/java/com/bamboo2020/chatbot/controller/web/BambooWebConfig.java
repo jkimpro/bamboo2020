@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //import com.rooting.best.config.session.HttpFrontRequest;
+import com.bamboo2020.chatbot.config.session.HttpFrontRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -40,33 +41,33 @@ public class BambooWebConfig extends WebMvcConfigurationSupport {
         converters.add(new MappingJackson2HttpMessageConverter());
     }
 
-//    @Bean
-//    public Docket api() {
-//        List<Parameter> parameters = new ArrayList<>();
-//        parameters.add(new ParameterBuilder()
-//                .name("x-session-info")
-//                .description("sessionInfo")
-//                .parameterType("header")
-//                .required(false)
-//                .modelRef(new ModelRef("string"))
-//                .build());
-//
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .globalOperationParameters(parameters)
-//                .ignoredParameterTypes(HttpFrontRequest.class)
-//                .groupName("Rooting-API")
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.rooting.best.controller.web"))
-////          .paths(PathSelectors.any())s
-//                .paths(PathSelectors.regex("^((?!OnlyTest).)*$"))    //OnlyTest를 가진 url은 swagger에 비노출
-//                .build()
-//                .apiInfo(apiEndPointsInfo())
-//                ;
-//    }
+    @Bean
+    public Docket api() {
+        List<Parameter> parameters = new ArrayList<>();
+        parameters.add(new ParameterBuilder()
+                .name("x-session-info")
+                .description("sessionInfo")
+                .parameterType("header")
+                .required(false)
+                .modelRef(new ModelRef("string"))
+                .build());
+
+        return new Docket(DocumentationType.SWAGGER_2)
+                .globalOperationParameters(parameters)
+                .ignoredParameterTypes(HttpFrontRequest.class)
+                .groupName("Bamboo2020-API")
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.bamboo2020.chatbot.controller.web"))
+//          .paths(PathSelectors.any())s
+                .paths(PathSelectors.regex("^((?!OnlyTest).)*$"))    //OnlyTest를 가진 url은 swagger에 비노출
+                .build()
+                .apiInfo(apiEndPointsInfo())
+                ;
+    }
 
     private ApiInfo apiEndPointsInfo() {
         String desc = "api";
-        return new ApiInfoBuilder().title("Rooting - API")
+        return new ApiInfoBuilder().title("Bamboo2020 - API")
                 .description(desc)
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
