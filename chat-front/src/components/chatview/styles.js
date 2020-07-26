@@ -1,5 +1,11 @@
 const styles = theme => ({
 
+    optionBtn:{
+      color: 'white',
+      float: 'bottom',
+      backgroundColor: '#9fa8da'
+    },
+
     content: {
       height: 'calc(100vh - 100px)',
       overflow: 'auto',
@@ -9,30 +15,31 @@ const styles = theme => ({
       overflowY: 'scroll',
       top: '50px',
       width: 'calc(100% - 300px)',
-      position: 'absolute'
+      position: 'absolute', 
+      paddingBottom: '10px',
     },
   
     userSent: {
-      float: 'left',
-      clear: 'both',
-      padding: '20px',
-      boxSizing: 'border-box',
-      wordWrap: 'break-word',
-      marginTop: '10px',
-      backgroundColor: '#707BC4',
-      color: 'white',
-      width: '300px',
-      borderRadius: '10px'
-    },
-  
-    friendSent: {
       float: 'right',
       clear: 'both',
       padding: '20px',
       boxSizing: 'border-box',
       wordWrap: 'break-word',
       marginTop: '10px',
-      backgroundColor: '#707BC4',
+      color: 'white',
+      width: '300px',
+      borderRadius: '10px',
+      backgroundColor: '#2196f3'
+    },
+  
+    friendSent: {
+      float: 'left',
+      clear: 'both',
+      padding: '20px',
+      boxSizing: 'border-box',
+      wordWrap: 'break-word',
+      marginTop: '10px',
+      backgroundColor: '#ffea00',
       color: 'white',
       width: '300px',
       borderRadius: '10px'

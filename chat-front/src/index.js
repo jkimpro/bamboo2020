@@ -10,16 +10,16 @@ import SignupComponent from './components/signup/signup';
 const firebase = require('firebase');
 require("firebase/firestore");
 
-// firebase.initializeApp({
-//   apiKey: "AIzaSyBDJIbUm1J0GqVgyNbopinpG2fX9WvHZP", // apiKey value에서 마지막에 A붙이기
-//   authDomain: "chat-front-68a45.firebaseapp.com",
-//   databaseURL: "https://chat-front-68a45.firebaseio.com",
-//   projectId: "chat-front-68a45",
-//   storageBucket: "chat-front-68a45.appspot.com",
-//   messagingSenderId: "618671476249",
-//   appId: "1:618671476249:web:576ff8a4e44db9948ba488",
-//   measurementId: "G-NKKVMR5T39"
-// });
+firebase.initializeApp({
+  apiKey: "AIzaSyBDJIbUm1J0GqVgyNbopinpG2fX9WvHZPA", // apiKey value에서 마지막에 A붙이기
+  authDomain: "chat-front-68a45.firebaseapp.com",
+  databaseURL: "https://chat-front-68a45.firebaseio.com",
+  projectId: "chat-front-68a45",
+  storageBucket: "chat-front-68a45.appspot.com",
+  messagingSenderId: "618671476249",
+  appId: "1:618671476249:web:576ff8a4e44db9948ba488",
+  measurementId: "G-NKKVMR5T39"
+});
 
 const routing = (
   <Router>
