@@ -12,7 +12,6 @@ class App extends Component{
         <RootContainer>
         {this.props}
         </RootContainer>
-      
       </div>
       );
   }

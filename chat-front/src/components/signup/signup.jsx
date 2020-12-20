@@ -33,15 +33,15 @@ class SignupComponent extends Component{
                     </Typography>
                     <form onSubmit={(e)=> this.submitSignUp(e)} className = {classes.form}>
                         <FormControl required fullWidth margin='normal'>
-                            <InputLabel htmlFor='signup-email-input'>Enter your email</InputLabel>
+                            <InputLabel htmlFor='signup-email-input'>이메일을 입력하세요 </InputLabel>
                             <Input autoComplete='email' onChange={(e) =>this.userTyping('email', e)} autoFocus id='signup-email-input'></Input>
                         </FormControl>
                         <FormControl required fullWidth margin='normal'>
-                            <InputLabel htmlFor='signup-password-input'> Create a password </InputLabel>
+                            <InputLabel htmlFor='signup-password-input'> 비밀번호를 입력하세요 </InputLabel>
                             <Input type = 'password' onChange={(e) => this.userTyping('password', e)} id='signup-password-input'></Input>
                         </FormControl>
                         <FormControl required fullWidth margin='normal'>
-                            <InputLabel htmlFor='signup-password-confirmation-input'> Confirm your password </InputLabel>
+                            <InputLabel htmlFor='signup-password-confirmation-input'> 비밀번호를 확인하세요 </InputLabel>
                             <Input type = 'password' onChange={(e) => this.userTyping('passwordConfirmation', e)} id='signup-password-confirmation-input'></Input>
                         </FormControl>
                         <Button type = 'submit' fullWidth variant='contained' color='primary' className={classes.submit}>Submit</Button>
@@ -55,7 +55,7 @@ class SignupComponent extends Component{
 
                     }
 
-                    <Typography component='h5' variant='h6' className = {classes.hasAccountHeader}> Already had it </Typography>
+                    <Typography component='h5' variant='h6' className = {classes.hasAccountHeader}> 이미 존재하는 계정입니다. </Typography>
                     <Link className ={classes.logInLink} to ='/login'>Log In!</Link>
                 </Paper>
             </main>

@@ -20,8 +20,6 @@ class LoginComponent extends Component{
         };
 
     }
-
-
     render(){
 
         const {classes} = this.props;
@@ -32,31 +30,31 @@ class LoginComponent extends Component{
                 </CssBaseline>
                 <Paper className={classes.paper}>
                     <Typography component='h1' variant='h5'>
-                        Log in!
+                        로그인 창
                     </Typography>
                     <form className={classes.form} onSubmit={(e) => this.submitLogin(e)}>
                         <FormControl required fullWidth margin='normal'>
-                            <InputLabel htmlFor='login-email-input'> Enter your email</InputLabel>
+                            <InputLabel htmlFor='login-email-input'> 이메일</InputLabel>
                             <Input autoComplete='email' autoFocus id='login-email-input' onChange={(e)=>this.userTyping('email',e)}></Input>
                         </FormControl>
 
                         <FormControl required fullWidth margin='normal'>
-                            <InputLabel htmlFor='login-password-input'> Enter your Password</InputLabel>
+                            <InputLabel htmlFor='login-password-input'> 비밀번호 </InputLabel>
                             <Input type = 'password' id='login-password-input' onChange={(e)=>this.userTyping('password',e)}></Input>
                         </FormControl>
 
-                        <Button type = 'submit' fullWidth variant ='contained' color ='primary' className={classes.submit}> Log in </Button>
+                        <Button type = 'submit' fullWidth variant ='contained' color ='primary' className={classes.submit}> 로그인 </Button>
                     </form>
                     {
 
                         this.state.loginError ?
-                        <Typography className={classes.errorText} component='h5' variant='h6'>
-                            Incorrect Login Information
+                        <Typography className={classes.errorText} component='h5' variant='h7'>
+                            정확하지 않은 이메일 형식입니다!
                         </Typography>:
                         null
                     }
-                    <Typography component='h5' variant='h6' className={classes.noAccoutHeader}> Don't Have Account </Typography>
-                    <Link className = {classes.signUpLink} to='/signup'> Sign Up!</Link>
+                    <Typography component='h5' variant='h7' className={classes.noAccoutHeader}> 로그인이 안되는 경우 회원가입을 요청드립니다.</Typography>
+                    <Link className = {classes.signUpLink} to='/signup'> 회원가입 </Link>
                 </Paper>
 
             </main>

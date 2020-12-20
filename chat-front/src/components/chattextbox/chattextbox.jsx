@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {TextField, withStyles} from '@material-ui/core';
 import {Send} from '@material-ui/icons';
 import styles from './styles';
+import axios from 'axios';
 
 class ChatTextBoxComponent extends Component{
 
@@ -36,8 +37,15 @@ class ChatTextBoxComponent extends Component{
     submitMessage = () =>{
         if(this.messageValid(this.state.chatText)){
             this.props.submitMessageFn(this.state.chatText);
+          
             //call parent function
             document.getElementById('chattextbox').value = '';
+
+            //axios url call
+            
+            
+
+
         }
     }
     userClickedInput = () => this.props.messageReadFn();

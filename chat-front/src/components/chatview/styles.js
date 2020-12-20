@@ -27,7 +27,7 @@ const styles = theme => ({
       wordWrap: 'break-word',
       marginTop: '10px',
       color: 'white',
-      width: '300px',
+      width: '200px',
       borderRadius: '10px',
       backgroundColor: '#2196f3'
     },
@@ -39,9 +39,9 @@ const styles = theme => ({
       boxSizing: 'border-box',
       wordWrap: 'break-word',
       marginTop: '10px',
-      backgroundColor: '#ffea00',
+      backgroundColor: '#ff94c2',
       color: 'white',
-      width: '300px',
+      width: '200px',
       borderRadius: '10px'
     },
   
@@ -56,6 +56,12 @@ const styles = theme => ({
       color: 'white',
       paddingTop: '10px',
       boxSizing: 'border-box'
+    },
+    paper: {
+      //padding: theme.spacing(1),
+      textAlign: 'center',
+      
+      color: 'white',
     }
   
   });
